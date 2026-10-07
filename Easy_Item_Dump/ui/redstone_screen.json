@@ -50,7 +50,15 @@
             "offset": [
               -15,
               30
-            ]
+            ],
+            "$deposit_cursor": true,
+            "$cursor_also_hotbar": true,
+            "$cursor_target": "inventory_items",
+            "$cursor_target_length": 27,
+            "$cursor_factory_name": "ez_cur_r_player_empty",
+            "$cursor_same_factory_name": "ez_cur_r_player_same",
+            "$cursor_hotbar_factory_name": "ez_cur_r_player_hb_empty",
+            "$cursor_hotbar_same_factory_name": "ez_cur_r_player_hb_same"
           }
         }
       },
@@ -67,7 +75,12 @@
               -30,
               30
             ],
-            "$include_hotbar": true
+            "$include_hotbar": true,
+            "$deposit_cursor": true,
+            "$cursor_target": "container_items",
+            "$cursor_target_length": 9,
+            "$cursor_factory_name": "ez_cur_r_box_empty",
+            "$cursor_same_factory_name": "ez_cur_r_box_same"
           }
         }
       }
@@ -119,7 +132,15 @@
             "offset": [
               -15,
               30
-            ]
+            ],
+            "$deposit_cursor": true,
+            "$cursor_also_hotbar": true,
+            "$cursor_target": "inventory_items",
+            "$cursor_target_length": 27,
+            "$cursor_factory_name": "ez_cur_c_player_empty",
+            "$cursor_same_factory_name": "ez_cur_c_player_same",
+            "$cursor_hotbar_factory_name": "ez_cur_c_player_hb_empty",
+            "$cursor_hotbar_same_factory_name": "ez_cur_c_player_hb_same"
           }
         }
       },
@@ -136,7 +157,12 @@
               -30,
               30
             ],
-            "$include_hotbar": true
+            "$include_hotbar": true,
+            "$deposit_cursor": true,
+            "$cursor_target": "container_items",
+            "$cursor_target_length": 9,
+            "$cursor_factory_name": "ez_cur_c_box_empty",
+            "$cursor_same_factory_name": "ez_cur_c_box_same"
           }
         }
       }

@@ -3,11 +3,11 @@
   "header": {
     "description": "Easily transfer items from inventory to containers, including crafters\n§8Original developer: §7Bud\n§8Successor developers: §7Jaydee Wetwork & Grok Build",
     "name": "Easy Item Dump",
-    "uuid": "d64f2667-be9d-470c-8925-f7a08314f522",
+    "uuid": "8300ae02-ef13-4144-81f6-cdb2f36af91b",
     "version": [
       0,
       0,
-      6
+      7
     ],
     "min_engine_version": [
       1,
@@ -19,11 +19,11 @@
     {
       "description": "Easily transfer items from inventory to containers, including crafters\n§8Original developer: §7Bud\n§8Successor developers: §7Jaydee Wetwork & Grok Build",
       "type": "resources",
-      "uuid": "19d7c225-e929-473c-a086-ed15b255fd68",
+      "uuid": "051dea85-48c8-47a4-af49-010fdde15a95",
       "version": [
         0,
         0,
-        6
+        7
       ]
     }
   ],

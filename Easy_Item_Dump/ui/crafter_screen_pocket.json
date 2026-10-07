@@ -50,7 +50,12 @@
               "85%-30px",
               -27
             ],
-            "$ez_length": 9
+            "$ez_length": 9,
+            "$deposit_cursor": true,
+            "$cursor_target": "combined_hotbar_and_inventory_items",
+            "$cursor_target_length": 36,
+            "$cursor_factory_name": "ez_cur_k_player_empty",
+            "$cursor_same_factory_name": "ez_cur_k_player_same"
           }
         }
       },
@@ -66,7 +71,12 @@
               "85%",
               -27
             ],
-            "$ez_length": 36
+            "$ez_length": 36,
+            "$deposit_cursor": true,
+            "$cursor_target": "container_items",
+            "$cursor_target_length": 9,
+            "$cursor_factory_name": "ez_cur_k_box_empty",
+            "$cursor_same_factory_name": "ez_cur_k_box_same"
           }
         }
       }
