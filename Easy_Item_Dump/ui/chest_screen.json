@@ -8,7 +8,9 @@
 // An empty slot wins. A partial stack of the same item is the fallback.
 // Desktop player deposits try the inventory before the hotbar.
 // The place mapping consumes the click so only one destination slot runs.
-// container_reset_held clears the left-click latch that place_all would otherwise leave held.
+// Pressing places the held stack, then cancels the drag. That still leaves
+// one item on the cursor. The next mapping places that one item into the
+// same destination slot.
 {
   "namespace": "chest",
   "ez_dump_image_from_chest": {
@@ -580,6 +582,12 @@
               "to_button_id": "button.container_reset_held",
               "mapping_type": "pressed",
               "consume_event": true
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.container_take_half_place_one",
+              "mapping_type": "pressed",
+              "consume_event": true
             }
           ],
           "visible": false,
@@ -634,6 +642,12 @@
               "to_button_id": "button.container_reset_held",
               "mapping_type": "pressed",
               "consume_event": true
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.container_take_half_place_one",
+              "mapping_type": "pressed",
+              "consume_event": true
             }
           ],
           "visible": false,
@@ -686,6 +700,12 @@
             {
               "from_button_id": "button.menu_ok",
               "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed",
+              "consume_event": true
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.container_take_half_place_one",
               "mapping_type": "pressed",
               "consume_event": true
             }
@@ -778,6 +798,12 @@
               "to_button_id": "button.container_reset_held",
               "mapping_type": "pressed",
               "consume_event": true
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.container_take_half_place_one",
+              "mapping_type": "pressed",
+              "consume_event": true
             }
           ],
           "visible": false,
@@ -832,6 +858,12 @@
               "to_button_id": "button.container_reset_held",
               "mapping_type": "pressed",
               "consume_event": true
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.container_take_half_place_one",
+              "mapping_type": "pressed",
+              "consume_event": true
             }
           ],
           "visible": false,
@@ -884,6 +916,12 @@
             {
               "from_button_id": "button.menu_ok",
               "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed",
+              "consume_event": true
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.container_take_half_place_one",
               "mapping_type": "pressed",
               "consume_event": true
             }
