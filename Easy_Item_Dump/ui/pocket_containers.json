@@ -3,8 +3,9 @@
 // Successor developers: Jaydee Wetwork & Grok Build
 // Horizontal pocket buttons. Same-item filtering uses chest.ez_dump_factory_filtered.
 // ez_dump_factory_inventory skips the hotbar (collection index 0 through 8).
-// Filtered buttons place the held stack once, using chest.ez_dump_cursor_place_*.
-// Pocket player deposits use the combined hotbar and inventory collection.
+// Filtered buttons move matching stacks only. The held item or stack stays on the cursor.
+// Placing that stack from the filter button latches a left-drag.
+// That placement is unresolvable in JSON UI, so 0.0.8 does not do it.
 {
   "namespace": "pocket_containers",
   "ez_dump_image_from_chest": {
@@ -58,137 +59,6 @@
     ],
     "layer": 6,
     "controls": [
-      {
-        "cursor_deposit": {
-          "type": "panel",
-          "layer": 1,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "size": [
-            "100%",
-            "100%"
-          ],
-          "ignored": "(not $deposit_cursor)",
-          "controls": [
-            {
-              "empty_slots": {
-                "type": "stack_panel",
-                "layer": 4,
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "size": [
-                  "100%",
-                  "100%"
-                ],
-                "collection_name": "$cursor_target",
-                "property_bag": {
-                  "#size": "$cursor_target_length"
-                },
-                "factory": {
-                  "name": "$cursor_factory_name",
-                  "control_name": "chest.ez_dump_cursor_place_empty"
-                },
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(#size*1)",
-                    "target_property_name": "#collection_length"
-                  }
-                ],
-                "$layer_base": 400
-              }
-            },
-            {
-              "hotbar_empty_slots": {
-                "type": "stack_panel",
-                "layer": 3,
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "size": [
-                  "100%",
-                  "100%"
-                ],
-                "collection_name": "hotbar_items",
-                "property_bag": {
-                  "#size": 9
-                },
-                "factory": {
-                  "name": "$cursor_hotbar_factory_name",
-                  "control_name": "chest.ez_dump_cursor_place_empty"
-                },
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(#size*1)",
-                    "target_property_name": "#collection_length"
-                  }
-                ],
-                "ignored": "(not $cursor_also_hotbar)",
-                "$cursor_target": "hotbar_items",
-                "$layer_base": 300
-              }
-            },
-            {
-              "same_slots": {
-                "type": "stack_panel",
-                "layer": 2,
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "size": [
-                  "100%",
-                  "100%"
-                ],
-                "collection_name": "$cursor_target",
-                "property_bag": {
-                  "#size": "$cursor_target_length"
-                },
-                "factory": {
-                  "name": "$cursor_same_factory_name",
-                  "control_name": "chest.ez_dump_cursor_place_same"
-                },
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(#size*1)",
-                    "target_property_name": "#collection_length"
-                  }
-                ],
-                "$layer_base": 200
-              }
-            },
-            {
-              "hotbar_same_slots": {
-                "type": "stack_panel",
-                "layer": 1,
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "size": [
-                  "100%",
-                  "100%"
-                ],
-                "collection_name": "hotbar_items",
-                "property_bag": {
-                  "#size": 9
-                },
-                "factory": {
-                  "name": "$cursor_hotbar_same_factory_name",
-                  "control_name": "chest.ez_dump_cursor_place_same"
-                },
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_property_name": "(#size*1)",
-                    "target_property_name": "#collection_length"
-                  }
-                ],
-                "ignored": "(not $cursor_also_hotbar)",
-                "$cursor_target": "hotbar_items",
-                "$layer_base": 100
-              }
-            }
-          ]
-        }
-      },
       {
         "stack_panel_1": {
           "type": "stack_panel",
@@ -254,16 +124,7 @@
         }
       }
     ],
-    "$ez_length|default": 54,
-    "$deposit_cursor|default": false,
-    "$cursor_also_hotbar|default": false,
-    "$cursor_target|default": "container_items",
-    "$cursor_target_length|default": 1,
-    "$cursor_hit_size|default": [30, 15],
-    "$cursor_factory_name|default": "ez_cur_unused_empty",
-    "$cursor_same_factory_name|default": "ez_cur_unused_same",
-    "$cursor_hotbar_factory_name|default": "ez_cur_unused_hotbar_empty",
-    "$cursor_hotbar_same_factory_name|default": "ez_cur_unused_hotbar_same"
+    "$ez_length|default": 54
   },
   "ez_dump_factory_inventory": {
     "type": "panel",
@@ -363,12 +224,7 @@
               "85%-30px",
               -27
             ],
-            "$ez_length": 54,
-            "$deposit_cursor": true,
-            "$cursor_target": "combined_hotbar_and_inventory_items",
-            "$cursor_target_length": 36,
-            "$cursor_factory_name": "ez_cur_p_player_empty",
-            "$cursor_same_factory_name": "ez_cur_p_player_same"
+            "$ez_length": 54
           }
         }
       },
@@ -384,12 +240,7 @@
               "85%",
               -27
             ],
-            "$ez_length": 36,
-            "$deposit_cursor": true,
-            "$cursor_target": "container_items",
-            "$cursor_target_length": 54,
-            "$cursor_factory_name": "ez_cur_p_chest_empty",
-            "$cursor_same_factory_name": "ez_cur_p_chest_same"
+            "$ez_length": 36
           }
         }
       }

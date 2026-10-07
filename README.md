@@ -11,6 +11,8 @@ Chests, barrels, shulkers, ender chests, hoppers, dispensers, droppers, crafters
 
 ## Install
 
-Import `Easy_Item_Dump_v0.0.7.mcpack`, or load the `Easy_Item_Dump` folder as a resource pack. In Minecraft the pack is named Easy Item Dump 0.0.7.
+Import `Easy_Item_Dump_v0.0.8.mcpack`, or load the `Easy_Item_Dump` folder as a resource pack. In Minecraft the pack is named Easy Item Dump 0.0.8.
+
+A filter button moves matching stacks and leaves the held item or stack on the cursor. Placing that held stack from the button latches a left-drag. That placement was returned in 0.0.8 and is unresolvable in JSON UI.
 
 The pack source is in `Easy_Item_Dump`. License is MIT. See `LICENSE`.
