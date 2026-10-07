@@ -11,6 +11,6 @@ Chests, barrels, shulkers, ender chests, hoppers, dispensers, droppers, crafters
 
 ## Install
 
-Import `Easy_Item_Dump_v0.0.7.mcpack`, or load the `Easy_Item_Dump` folder as a resource pack.
+Import `Easy_Item_Dump_v0.0.7.mcpack`, or load the `Easy_Item_Dump` folder as a resource pack. In Minecraft the pack is named Easy Item Dump 0.0.7.
 
 The pack source is in `Easy_Item_Dump`. License is MIT. See `LICENSE`.
