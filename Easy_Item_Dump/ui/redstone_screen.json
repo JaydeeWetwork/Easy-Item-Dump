@@ -1,0 +1,145 @@
+// Easy Item Dump
+// Original developer: Bud (bud-aj29)
+// Successor developers: Jaydee Wetwork & Grok Build
+// Hopper, dispenser, dropper, and the desktop crafter. Controls are chest.ez_dump_*.
+{
+  "namespace": "redstone",
+  "redstone_panel_top_half": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_chest@chest.ez_dump_button_panel": {
+            "$item_location": "container_items",
+            "$button_content": "chest.ez_dump_image_from_chest",
+            "$factory_selection": "chest.ez_dump_factory",
+            "$ez_length": 9,
+            "offset": [
+              -15,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_inventory@chest.ez_dump_button_panel": {
+            "$item_location": "inventory_items",
+            "$button_content": "chest.ez_dump_image_from_inventory",
+            "$factory_selection": "chest.ez_dump_factory",
+            "$ez_length": 27,
+            "offset": [
+              -30,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_chest_filtered@chest.ez_dump_button_panel": {
+            "$item_location": "container_items",
+            "$button_content": "chest.ez_dump_image_from_chest_filtered",
+            "$factory_selection": "chest.ez_dump_factory_filtered",
+            "$ez_length": 9,
+            "offset": [
+              -15,
+              30
+            ]
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_inventory_filtered@chest.ez_dump_button_panel": {
+            "$item_location": "inventory_items",
+            "$button_content": "chest.ez_dump_image_from_inventory_filtered",
+            "$factory_selection": "chest.ez_dump_factory_filtered",
+            "$ez_length": 27,
+            "offset": [
+              -30,
+              30
+            ],
+            "$include_hotbar": true
+          }
+        }
+      }
+    ]
+  },
+  "panel_crafter/root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_chest@chest.ez_dump_button_panel": {
+            "$item_location": "container_items",
+            "$button_content": "chest.ez_dump_image_from_chest",
+            "$factory_selection": "chest.ez_dump_factory",
+            "$ez_length": 9,
+            "offset": [
+              -15,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_inventory@chest.ez_dump_button_panel": {
+            "$item_location": "inventory_items",
+            "$button_content": "chest.ez_dump_image_from_inventory",
+            "$factory_selection": "chest.ez_dump_factory",
+            "$ez_length": 27,
+            "offset": [
+              -30,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_chest_filtered@chest.ez_dump_button_panel": {
+            "$item_location": "container_items",
+            "$button_content": "chest.ez_dump_image_from_chest_filtered",
+            "$factory_selection": "chest.ez_dump_factory_filtered",
+            "$ez_length": 9,
+            "offset": [
+              -15,
+              30
+            ]
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_inventory_filtered@chest.ez_dump_button_panel": {
+            "$item_location": "inventory_items",
+            "$button_content": "chest.ez_dump_image_from_inventory_filtered",
+            "$factory_selection": "chest.ez_dump_factory_filtered",
+            "$ez_length": 27,
+            "offset": [
+              -30,
+              30
+            ],
+            "$include_hotbar": true
+          }
+        }
+      }
+    ]
+  }
+}

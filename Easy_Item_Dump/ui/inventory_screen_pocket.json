@@ -1,0 +1,44 @@
+// Easy Item Dump
+// Original developer: Bud (bud-aj29)
+// Successor developers: Jaydee Wetwork & Grok Build
+// Pocket inventory drop. Controls are crafting.ez_drop_*.
+{
+  "namespace": "crafting_pocket",
+  "left_tab_navigation_panel_pocket/content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "drop_inventory@crafting.ez_drop_button_panel": {
+            "$item_location": "inventory_items",
+            "$button_content": "crafting.ez_drop_image",
+            "$factory_selection": "crafting.ez_drop_factory",
+            "offset": [
+              0,
+              0
+            ],
+            "$ez_length": 27
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "drop_inventory_filtered@crafting.ez_drop_button_panel": {
+            "$item_location": "inventory_items",
+            "$button_content": "crafting.ez_drop_image_filtered",
+            "$factory_selection": "crafting.ez_drop_factory_filtered",
+            "offset": [
+              0,
+              30
+            ],
+            "$ez_length": 27,
+            "$include_hotbar": true
+          }
+        }
+      }
+    ]
+  }
+}

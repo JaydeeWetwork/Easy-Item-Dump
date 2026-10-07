@@ -1,0 +1,75 @@
+// Easy Item Dump
+// Original developer: Bud (bud-aj29)
+// Successor developers: Jaydee Wetwork & Grok Build
+// Pocket crafter. The 9 crafter slots use the shared pocket button panel.
+{
+  "namespace": "crafter_pocket",
+  "inventory_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_chest@pocket_containers.ez_dump_button_panel": {
+            "$item_location": "container_items",
+            "$button_content": "pocket_containers.ez_dump_image_from_chest",
+            "$factory_selection": "chest.ez_dump_factory",
+            "offset": [
+              0,
+              -27
+            ],
+            "$ez_length": 9
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_inventory@pocket_containers.ez_dump_button_panel": {
+            "$item_location": "combined_hotbar_and_inventory_items",
+            "$button_content": "pocket_containers.ez_dump_image_from_inventory",
+            "$factory_selection": "pocket_containers.ez_dump_factory_inventory",
+            "offset": [
+              30,
+              -27
+            ],
+            "$ez_length": 36
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_chest_filtered@pocket_containers.ez_dump_button_panel": {
+            "$item_location": "container_items",
+            "$button_content": "pocket_containers.ez_dump_image_from_chest_filtered",
+            "$factory_selection": "chest.ez_dump_factory_filtered",
+            "offset": [
+              "85%-30px",
+              -27
+            ],
+            "$ez_length": 9
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "from_inventory_filtered@pocket_containers.ez_dump_button_panel": {
+            "$item_location": "combined_hotbar_and_inventory_items",
+            "$button_content": "pocket_containers.ez_dump_image_from_inventory_filtered",
+            "$factory_selection": "chest.ez_dump_factory_filtered",
+            "offset": [
+              "85%",
+              -27
+            ],
+            "$ez_length": 36
+          }
+        }
+      }
+    ]
+  }
+}
